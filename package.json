@@ -18,15 +18,18 @@
     "chalk": "^2.4.2",
     "commander": "^3.0.2",
     "intl": "^1.2.5",
-    "lib-jess": "file:../lib-jess"
+    "lib-jess": "git+https://github.com/adam-cyclones/lib-jess.git",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@types/winston": "^2.4.4",
     "@types/commander": "^2.12.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "bats": "^1.1.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "pkg": "^4.4.2"
   }
 }
