@@ -5,8 +5,11 @@
   "bin": {
     "jess": "./target/jess.js"
   },
+  "config": {
+    "tsc": "npx -p typescript tsc"
+  },
   "scripts": {
-    "build-only": "tsc -p ./",
+    "build-only": "$npm_package_config_tsc -p ./",
     "build": "npm run update-dev-lib-jess && tsc -p ./",
     "test": "npx bats test/test.bats",
     "update-dev-lib-jess": "npm i lib-jess"
@@ -14,16 +17,13 @@
   "author": "Adam Crockett",
   "license": "ISC",
   "dependencies": {
-    "@types/chalk": "^2.2.0",
     "chalk": "^2.4.2",
     "commander": "^3.0.2",
     "intl": "^1.2.5",
-    "lib-jess": "git+https://github.com/adam-cyclones/lib-jess.git",
+    "lib-jess": "file:../lib-jess",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@types/winston": "^2.4.4",
-    "@types/commander": "^2.12.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "bats": "^1.1.0",
