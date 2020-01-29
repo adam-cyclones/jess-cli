@@ -1,12 +1,13 @@
 {
   "name": "jess-cli",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "",
   "bin": {
     "jess": "./target/jess.js"
   },
   "config": {
-    "tsc": "npx -p typescript tsc"
+    "tsc": "npx -p typescript tsc",
+    "ROOT": "../"
   },
   "scripts": {
     "build-only": "$npm_package_config_tsc -p ./",
